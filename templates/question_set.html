@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3"><h2>Generated Question Set</h2><button class="btn btn-primary" onclick="window.print()">Print</button></div>
+<div class="card card-body">
+{% for q in questions %}
+<div class="question mb-4"><h5>{{loop.index}}. {{q.question}}</h5>
+<p><span class="badge bg-secondary">{{q.marks}} Marks</span> <span class="badge bg-info text-dark">{{q.difficulty}}</span> <span class="badge bg-light text-dark">{{q.bloom}}</span></p>
+<p><strong>Answer:</strong> {{q.answer or 'Not provided'}}</p></div>
+{% endfor %}
+{% if not questions %}<p>No questions available. Add questions first.</p>{% endif %}
+</div>{% endblock %}
