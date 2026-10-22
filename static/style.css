@@ -1,0 +1,2 @@
+body{background:#f5f7fb}.hero{background:linear-gradient(135deg,#0d6efd,#4f8cff);color:white}.table td{font-size:.92rem}.question{border-bottom:1px solid #ddd;padding-bottom:15px}
+@media print{nav,footer,.btn{display:none!important}body{background:white}}
